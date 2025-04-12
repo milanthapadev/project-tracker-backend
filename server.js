@@ -12,9 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? 'https://project-tracker-devagency.vercel.app' 
-    : 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://project-tracker-devagency.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
